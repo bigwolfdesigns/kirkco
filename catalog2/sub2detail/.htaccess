@@ -1,0 +1,5 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ([^/]*)/?([^/]*)/?([^/]*)/?.html index.php?s2=$3&s1=$2&c=$1 [L]
